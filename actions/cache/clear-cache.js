@@ -1,4 +1,4 @@
-module.exports = async ({github, context}, cacheKey) => {
+module.exports = async ({ github, context }, cacheKey) => {
     try {
         const caches = await github.rest.actions.getActionsCacheList({
             owner: context.repo.owner,

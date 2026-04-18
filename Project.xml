@@ -3,7 +3,9 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="HaxeFlixel Template" file="Template" main="Main" version="1.0.0" company="Joalor64" />
+	<app title="HaxeFlixel Template" packageName="com.joalor64.template"
+		package="com.joalor64.template" file="Template" main="Main" version="1.0.0"
+		company="Joalor64" />
 	<app preloader="flixel.system.FlxPreloader" />
 
 	<!-- Minimum without FLX_NO_GAMEPAD: 11.8, without FLX_NO_NATIVE_CURSOR: 11.2 -->
@@ -15,16 +17,18 @@
 	<window width="1280" height="720" fps="60" background="#000000" hardware="true" vsync="false" />
 
 	<!-- HTML5 -->
-	<window if="html5" resizable="false" />
+	<window if="html5" resizable="true" />
 
 	<!-- Desktop -->
 	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" />
 
 	<!-- macOS -->
-	<window if="mac" orientation="auto" fullscreen="false" resizable="true" vsync="false" allow-high-dpi="true" />
+	<window if="mac" orientation="auto" fullscreen="false" resizable="true" vsync="false"
+		allow-high-dpi="true" />
 
 	<!-- Mobile -->
-	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" />
+	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0"
+		resizable="false" allow-shaders="true" allow-high-dpi="true" />
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
@@ -32,6 +36,8 @@
 	<set name="BUILD_DIR" value="export/release" unless="debug" />
 
 	<source path="source" />
+
+	<assets path="assets" exclude="*.ogg" if="web" />
 	<assets path="assets" exclude="*.mp3" unless="web" />
 
 	<!-- _______________________________ Libraries ______________________________ -->
@@ -41,21 +47,26 @@
 
 	<!-- In case you want to use the addons package -->
 	<haxelib name="flixel-addons" />
-	
+
 	<!-- In case you want to use the ui package -->
 	<haxelib name="flixel-ui" />
 
 	<!-- In case you want to use the tools package -->
 	<haxelib name="flixel-tools" />
 
+	<!-- In case you want Android support -->
+	<haxelib name="extension-androidtools" if="android" />
+
 	<!-- ______________________________ Haxedefines _____________________________ -->
 
-	<!-- Optimise inputs, be careful you will get null errors if you don't use conditionals in your game -->
+	<!-- Optimise inputs, be careful you will get null errors if you don't use conditionals in your
+	game -->
 	<haxedef name="FLX_NO_MOUSE" if="mobile" />
 	<haxedef name="FLX_NO_KEYBOARD" if="mobile" />
 	<haxedef name="FLX_NO_TOUCH" if="desktop" />
 
-	<!-- Disable the Flixel core debugger. Automatically gets set whenever you compile in release mode! -->
+	<!-- Disable the Flixel core debugger. Automatically gets set whenever you compile in release
+	mode! -->
 	<haxedef name="FLX_NO_DEBUG" unless="debug" />
 
 	<!-- Enable this for Nape release builds for a serious peformance improvement -->

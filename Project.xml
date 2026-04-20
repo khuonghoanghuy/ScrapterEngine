@@ -85,6 +85,9 @@
 	<!-- Pretty error reporting -->
 	<haxedef name="message.reporting" value="pretty" />
 
+	<!-- iOS Deployment Target -->
+	<ios deployment="13.6" />
+
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<!-- Place custom nodes like icons here (higher priority to override the HaxeFlixel icon) -->

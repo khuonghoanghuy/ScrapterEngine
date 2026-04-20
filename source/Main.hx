@@ -37,6 +37,9 @@ class Main extends Sprite
 		Lib.current.addChild(new Main());
 	}
 
+	/**
+	 * Initializes the game and sets up the application.
+	 */
 	public function new():Void
 	{
 		super();

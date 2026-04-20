@@ -16,7 +16,7 @@ class Paths
 	/**
 	 * The sound extension to use.
 	 */
-	inline public static final SOUND_EXT = #if !html5 "ogg" #else "mp3" #end;
+	inline public static final SOUND_EXT:String = #if !html5 "ogg" #else "mp3" #end;
 
 	/**
 	 * The default folder to use when looking for assets.

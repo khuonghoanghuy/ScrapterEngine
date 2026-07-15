@@ -90,5 +90,5 @@
 
 	<!-- _________________________________ Custom _______________________________ -->
 
-	<!-- Place custom nodes like icons here (higher priority to override the HaxeFlixel icon) -->
+	<setenv name="HAXEPATH" value="./"/>
 </project>

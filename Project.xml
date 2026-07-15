@@ -3,9 +3,9 @@
 
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="HaxeFlixel Template" packageName="com.joalor64.template"
-		package="com.joalor64.template" file="Template" main="Main" version="1.0.0"
-		company="Joalor64" />
+	<app title="Scrapter Engine" packageName="com.huy1234th.scrapterEngine"
+		package="com.huy1234th.scrapterEngine" file="game" main="Main" version="1.0.0"
+		company="Huy1234TH" />
 	<app preloader="flixel.system.FlxPreloader" />
 
 	<!-- Minimum without FLX_NO_GAMEPAD: 11.8, without FLX_NO_NATIVE_CURSOR: 11.2 -->

@@ -3,6 +3,8 @@ package;
 #if sys
 import sys.FileSystem;
 import sys.io.File;
+#elseif html5
+import openfl.utils.Assets;
 #end
 import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
@@ -17,6 +19,11 @@ class Paths
 	 * The sound extension to use.
 	 */
 	inline public static final SOUND_EXT:String = #if !html5 "ogg" #else "mp3" #end;
+
+	/**
+	 * The scripts extension to use.
+	 */
+	inline public static final SCRIPT_EXT:String = "hxs";
 
 	/**
 	 * The default folder to use when looking for assets.
@@ -150,4 +157,19 @@ class Paths
 	 */
 	inline static public function getPackerAtlas(key:String, ?folder:String):FlxAtlasFrames
 		return FlxAtlasFrames.fromSpriteSheetPacker(image(key, folder), getPath('images/$key.txt', folder));
+
+	/**
+	 * Gets a text from a file.
+	 * @param key The key for the text file need to get.
+	 * @param folder The folder to look in, if it exists.
+	 * @return A text inside of a file.
+	 */
+	inline static public function getFileContent(key:String, ?folder:String)
+	{
+		#if html5
+		return Assets.getText(Paths.getPath('$key', folder));
+		#elseif sys
+		return File.getContent(Paths.getPath('$key', folder));
+		#end
+	}
 }

@@ -4,15 +4,6 @@ import flixel.FlxG;
 import flixel.text.FlxText;
 import flixel.FlxState;
 
-class QuickState extends FlxState
-{
-	override function create() 
-	{
-		super.create();
-		FlxG.switchState(() -> new GameState("initState"));
-	}	
-}
-
 class GameState extends FlxState
 {
 	var scriptFile:GameScript;

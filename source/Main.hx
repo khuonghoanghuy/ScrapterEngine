@@ -13,7 +13,7 @@ class Main extends Sprite
 	 * Configuration values for the game. You should not need to change these at runtime.
 	 */
 	public final config:Dynamic = {
-		gameDimensions: [1280, 720], // Width + Height of the game in pixels (might be less / more in actual pixels depending on your zoom).
+		gameDimensions: [0, 0], // Width + Height of the game in pixels (might be less / more in actual pixels depending on your zoom).
 		zoom: -1.0, // If -1, zoom is automatically calculated to fit the window dimensions. (Removed from Flixel 5.0.0)
 		framerate: 60, // How many frames per second the game should run at.
 		initialState: IntroState, // is the state in which the game will start.

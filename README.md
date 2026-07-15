@@ -1,2 +1,2 @@
-# HaxeFlixel Template
-Just a simple template for making games with HaxeFlixel.
+# Scrapter Engine
+This is a haxeflixel template with bunch of thing for my future project.
